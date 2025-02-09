@@ -1,3 +1,3 @@
 export interface Branding {
-  colors: "yellow" | "white" | "grey" | "black" | "red" | "default";
+  colors: "yellow" | "white" | "grey" | "black" | "red" | "default" | undefined;
 }
