@@ -1,0 +1,56 @@
+:root {
+  --brand-red: #96031A;
+  --brand-black: #1B1B1E;
+  --brand-grey: #6D676E;
+  --brand-white: #FBFFFE;
+  --brand-yellow: #FAA916;
+  /* also add font sizes etc here as well */
+}
+
+/**
+ * TODO: Add font classes and styling here as default
+ */
+
+* {
+  font-size: 16px;
+}
+
+.bg-red {
+  background: var(--brand-red);
+}
+
+.bg-black {
+  background: var(--brand-black);
+}
+
+.bg-grey {
+  background: var(--brand-grey);
+}
+
+.bg-white {
+  background: var(--brand-white);
+}
+
+.bg-yellow {
+  background: var(--brand-yellow);
+}
+
+.text-red {
+  color: var(--brand-red);
+}
+
+.text-black {
+  color: var(--brand-black);
+}
+
+.text-grey {
+  color: var(--brand-grey);
+}
+
+.text-white {
+  color: var(--brand-white);
+}
+
+.text-yellow {
+  color: var(--brand-yellow);
+}
