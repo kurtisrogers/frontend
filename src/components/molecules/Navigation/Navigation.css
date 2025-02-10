@@ -5,5 +5,21 @@ nav.site-navigation > ul {
 
 nav.site-navigation li {
   list-style-type: none;
-  padding-right: 1rem;
+}
+
+nav.site-navigation a {
+  padding: .5rem .75rem;
+  margin-left: .5rem;
+  outline: 2px solid var(--brand-black);
+}
+
+nav.site-navigation a:focus-visible {
+  outline-color: var(--brand-white);
+  text-decoration: none;
+  background: var(--a11y-focus-yellow);
+  color: var(--brand-black);
+}
+
+nav.site-navigation a:hover {
+  text-decoration: none;
 }

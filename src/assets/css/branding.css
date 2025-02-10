@@ -1,10 +1,13 @@
 :root {
+  --normal-font: 'Open Sans', sans-serif;
+  --heading-font: "Oswald", serif;
   --brand-base-grid: 1260px;
   --brand-red: #96031A;
   --brand-black: #1B1B1E;
   --brand-grey: #6D676E;
   --brand-white: #FBFFFE;
   --brand-yellow: #FAA916;
+  --a11y-focus-yellow: yellow;
   --text-size-xs: 0.38rem;
   --text-size-sm: 0.62rem;
   --text-size-md: 1rem;
@@ -15,6 +18,12 @@
   --text-size-4xl: 11.09rem;
   --text-size-5xl: 17.94rem;
   color-scheme: light dark;
+}
+
+/* container rules */
+
+#main-content {
+  overflow: hidden;
 }
 
 /* colours */
@@ -70,9 +79,9 @@ html, body {
 /* text */
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--normal-font);
   font-weight: false;
-  line-height: 1.65;
+  word-break: all;
 }
 
 h1,
@@ -80,37 +89,41 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--heading-font);
   font-weight: true;
   line-height: 1.15;
 }
 
 h1,
 .text-size-h1 {
-  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   margin-top: 0;
   font-size: var(--text-size-4xl);
+  line-height: 1;
 }
 
 h2,
 .text-size-h2 {
   font-size: var(--text-size-3xl);
+  line-height: 1;
 }
 
 h3,
 .text-size-h3 {
   font-size: var(--text-size-2xl);
+  line-height: 1;
 }
 
 h4,
 .text-size-h4 {
   font-size: var(--text-size-xl);
+  line-height: 1;
 }
 
 h5,
 .text-size-h5 {
   font-size: var(--text-size-lg);
+  line-height: 1;
 }
 
 .text-caption {
@@ -136,4 +149,5 @@ button {
   color: var(--brand-black);
   font-weight: bold;
   cursor: pointer;
+  outline: none;
 }

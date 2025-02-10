@@ -1,11 +1,13 @@
 import { handleColourClasses } from "@/helpers/colours";
 import type { Branding } from "@/types/branding";
+import "./Content.css";
 
 interface Props {
   content: any;
   children: any;
   gridLayout?: "wide" | "full";
   backgroundColor?: Branding["colors"];
+  [key: string]: any;
 }
 
 export default function Content( props: Readonly<Props> ) {

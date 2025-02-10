@@ -6,7 +6,7 @@ import { Dynamic } from 'solid-js/web';
 
 type ComponentBlock = {
   component: any;
-  content: any;
+  [key: string]: any;
 }
 
 interface Props {

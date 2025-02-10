@@ -1,5 +1,8 @@
 {
-  "name": "vite-template-solid",
+  "name": "my-solid-website",
+  "author": {
+    "name": "RogueTrufflePig"
+  },
   "version": "0.0.0",
   "description": "",
   "type": "module",
@@ -9,22 +12,28 @@
     "build": "vite build",
     "serve": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "vitest"
   },
   "license": "MIT",
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.2",
+    "@solidjs/testing-library": "^0.8.10",
     "@storybook/addon-essentials": "^8.4.4",
     "@storybook/addon-interactions": "^8.4.4",
     "@storybook/blocks": "^8.4.4",
     "@storybook/test": "^8.4.4",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/user-event": "^14.6.1",
+    "jsdom": "^26.0.0",
     "solid-devtools": "^0.29.2",
     "storybook": "^8.4.4",
     "storybook-solidjs": "^1.0.0-beta.6",
     "storybook-solidjs-vite": "^1.0.0-beta.6",
     "typescript": "^5.3.3",
     "vite": "^5.0.11",
-    "vite-plugin-solid": "^2.8.2"
+    "vite-plugin-solid": "^2.8.2",
+    "vitest": "^3.0.5"
   },
   "dependencies": {
     "@solidjs/router": "^0.15.1",

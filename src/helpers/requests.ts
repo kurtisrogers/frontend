@@ -1,20 +1,24 @@
-export const GET = async (query: string) => {
-  const response = await fetch(query);
+export const GET = async (query?: string) => {
+  // const response = await fetch(query);
 
   return [
     {
-      text: 'home',
+      text: 'Home',
       link: '/'
-    },
-    {
-      text: 'hello world',
-      link: '/hello-world'
     },
     {
       text: 'About us',
       link: '/about-us',
-    }
+    },
+    {
+      text: 'Blog',
+      link: '/blog',
+    },
+    {
+      text: 'Contact us',
+      link: '/contact-us',
+    },
   ]
 
-  return response.json();
+  // return response.json();
 }
