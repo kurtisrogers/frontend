@@ -6,7 +6,7 @@ const [ items ] = createResource(() => GET('https://api.chucknorris.io/jokes/ran
 
 export default function Navigation() {
   return (
-    <nav>
+    <nav class="site-navigation">
       <ul>
         <For each={items()}>
           {(item, index) => {

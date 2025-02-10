@@ -1,5 +1,32 @@
 header {
-  display: grid;
-  grid-template-columns: 1fr;
-  background: red;
+  background: var(--brand-black);
+}
+
+header .logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header > .content-skipper {
+  position: absolute;
+  display: inline-block;
+  inset: -999999px auto auto -999999px;
+  font-size: 0px;
+}
+
+header > .content-skipper:focus {
+  position: relative;
+  inset: 0px;
+  font-size: 1em;
+  padding: 1em;
+}
+
+header > .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--brand-base-grid);
+  margin: 0 auto;
 }

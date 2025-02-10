@@ -18,7 +18,7 @@ export const Layout = (props: Props) => {
   return (
     <>
       <Header />
-      <main>
+      <main id='main-content'>
         <For each={props.components} fallback={<div>Loading...</div>}>
           {(item) => <Dynamic {...item} />}
         </For>

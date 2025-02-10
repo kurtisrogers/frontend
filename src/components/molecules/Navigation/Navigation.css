@@ -1,0 +1,9 @@
+nav.site-navigation > ul {
+  display: flex;
+  padding: 0px;
+}
+
+nav.site-navigation li {
+  list-style-type: none;
+  padding-right: 1rem;
+}

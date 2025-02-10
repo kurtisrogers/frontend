@@ -17,6 +17,10 @@ export const Home = [
     content: <p>Duis at malesuada justo. Maecenas egestas eget libero eget lobortis. Vivamus cursus viverra nisi non consectetur. Proin risus nisl, laoreet nec vulputate nec, posuere a enim. Morbi fringilla erat id tellus congue viverra. Suspendisse semper ligula nec rhoncus venenatis. Etiam semper iaculis felis, et ullamcorper risus porttitor quis. Cras auctor tempus lorem ac tristique.</p>,
     gridLayout: "full",
   },
+  {
+    component: Content,
+    content: <div><p>Some content for this section</p><button>Find out more</button></div>,
+  },
 ]
 
 export const About = [
