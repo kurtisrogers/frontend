@@ -14,7 +14,8 @@
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "test": "vitest",
-    "test:update": "vitest -u"
+    "test:update": "vitest -u",
+    "postinstall": "husky"
   },
   "license": "MIT",
   "devDependencies": {
@@ -27,6 +28,7 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/user-event": "^14.6.1",
+    "husky": "^9.1.7",
     "jsdom": "^26.0.0",
     "solid-devtools": "^0.29.3",
     "storybook": "^8.5.7",

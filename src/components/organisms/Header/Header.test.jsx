@@ -1,6 +1,5 @@
 // src/components/LinkButton.test.jsx
 import { render } from '@solidjs/testing-library';
-import { Router } from '@solidjs/router';
 import Header from '.';
 import { describe, it, expect } from 'vitest';
 
