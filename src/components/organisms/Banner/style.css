@@ -1,0 +1,36 @@
+.banner {
+  display: grid;
+  width: 100%;
+  height: calc(100vh - 8rem);
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  overflow-x: clip;
+  gap: 1rem;
+  margin: 4rem 0px;
+}
+
+.banner__content {
+  grid-column: span 4;
+  align-self: center;
+  z-index: 1;
+}
+
+.banner__content ul {
+  padding-left: 1em;
+}
+
+.banner__content h1 {
+  margin-bottom: 0px;
+}
+
+.banner__image {
+  grid-column: span 8;
+}
+
+.banner img {
+  display: block;
+  object-fit: cover;
+  width: 110%;
+  height: calc(100vh - 8rem);
+  margin-left: -10%;
+}

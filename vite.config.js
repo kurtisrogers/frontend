@@ -1,13 +1,13 @@
 import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
-import tsconfigPaths from 'vite-tsconfig-paths'
-
-import path from "path";
+import tsconfigPaths from 'vite-tsconfig-paths';
+import path from 'path';
 
 export default defineConfig({
   resolve: {
     alias: {
       "css": path.resolve(__dirname, "./src/assets/css"),
+      "@": path.resolve(__dirname, "./src"),
     },
   },
   plugins: [
@@ -24,5 +24,16 @@ export default defineConfig({
   // },
   build: {
     target: 'esnext',
+  },
+  test: {
+    watch: false,
+    globals: true, // Use global test functions like describe, it, expect
+    environment: 'jsdom', // Use jsdom for DOM testing
+    css: true, // Enable CSS support
+    server: {
+      deps: {
+        inline: ["@solidjs/testing-library", "@solidjs/router"],
+      },
+    },
   },
 });

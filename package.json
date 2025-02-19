@@ -17,30 +17,33 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@chromatic-com/storybook": "^3.2.2",
+    "@chromatic-com/storybook": "^3.2.4",
     "@solidjs/testing-library": "^0.8.10",
-    "@storybook/addon-essentials": "^8.4.4",
-    "@storybook/addon-interactions": "^8.4.4",
-    "@storybook/blocks": "^8.4.4",
-    "@storybook/test": "^8.4.4",
+    "@storybook/addon-essentials": "^8.5.7",
+    "@storybook/addon-interactions": "^8.5.7",
+    "@storybook/blocks": "^8.5.7",
+    "@storybook/test": "^8.5.7",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/user-event": "^14.6.1",
     "jsdom": "^26.0.0",
-    "solid-devtools": "^0.29.2",
-    "storybook": "^8.4.4",
+    "solid-devtools": "^0.29.3",
+    "storybook": "^8.5.7",
     "storybook-solidjs": "^1.0.0-beta.6",
     "storybook-solidjs-vite": "^1.0.0-beta.6",
-    "typescript": "^5.3.3",
-    "vite": "^5.0.11",
-    "vite-plugin-solid": "^2.8.2",
-    "vitest": "^3.0.5"
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0",
+    "vite-plugin-solid": "^2.11.1",
+    "vitest": "^3.0.6"
   },
   "dependencies": {
-    "@solidjs/router": "^0.15.1",
-    "@types/node": "^22.9.0",
+    "@solidjs/router": "^0.15.3",
+    "@types/node": "^22.13.4",
     "modern-normalize": "^3.0.1",
-    "solid-js": "^1.8.11",
-    "vite-tsconfig-paths": "^5.1.0"
+    "solid-js": "^1.9.4",
+    "vite-tsconfig-paths": "^5.1.4"
   },
-  "packageManager": "yarn@4.5.1"
+  "engines": {
+    "node": ">=18.x"
+  },
+  "packageManager": "yarn@3.6.1+sha512.de524adec81a6c3d7a26d936d439d2832e351cdfc5728f9d91f3fc85dd20b04391c038e9b4ecab11cae2b0dd9f0d55fd355af766bc5c1a7f8d25d96bb2a0b2ca"
 }

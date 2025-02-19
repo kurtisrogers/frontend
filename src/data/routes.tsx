@@ -1,8 +1,4 @@
-import Home from "@/pages/index";
-import AboutUs from "@/pages/about-us";
-import User from "@/pages/about-us/user";
 import { Layout } from "@/helpers/layouts";
-
 import {Home as HomeContent, About as AboutContent} from "@/data/content";
 
 // either build something custom and light OR
@@ -11,15 +7,15 @@ import {Home as HomeContent, About as AboutContent} from "@/data/content";
 export const Navigation = (children?: any) => [
   {
     path: "/",
-    component: () => <Layout components={HomeContent}><Home /></Layout>,
+    component: () => <Layout components={HomeContent} />,
   },
   {
-    path: "/about-us",
-    component: () => <Layout components={AboutContent}><AboutUs /></Layout>,
+    path: "/about",
+    component: () => <Layout components={AboutContent} />,
   },
   {
     path: "/about-us/:user",
-    component: () => <Layout components={[]}><User /></Layout>,
+    component: () => <Layout components={[]} />,
   },
   {
     path: "*",

@@ -7,8 +7,8 @@ export const GET = async (query?: string) => {
       link: '/'
     },
     {
-      text: 'About us',
-      link: '/about-us',
+      text: 'About',
+      link: '/about',
     },
     {
       text: 'Blog',

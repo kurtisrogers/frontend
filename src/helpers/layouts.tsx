@@ -1,6 +1,6 @@
 import { For } from 'solid-js';
-import Header from "@/components/organisms/Header/Header"
-import Footer from "@/components/organisms/Footer/Footer"
+import Header from "@/components/organisms/Header"
+import Footer from "@/components/organisms/Footer"
 
 import { Dynamic } from 'solid-js/web';
 
@@ -11,7 +11,7 @@ type ComponentBlock = {
 
 interface Props {
   components: ComponentBlock[];
-  children: any;
+  children?: any;
 }
 
 export const Layout = (props: Props) => {

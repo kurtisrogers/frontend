@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from 'storybook-solidjs';
-import Header from '@/components/organisms/Header/Header';
+import Header from '@/components/organisms/Header';
 import { Router, Route } from '@solidjs/router';
 
 export default {

@@ -1,11 +1,12 @@
 import { handleColourClasses } from "@/helpers/colours";
 import type { Branding } from "@/types/branding";
-import "./Content.css";
+import type { gridLayoutOptions } from "@/types/grid";
+import "./style.css";
 
 interface Props {
   content: any;
   children: any;
-  gridLayout?: "wide" | "full";
+  gridLayout?: gridLayoutOptions;
   backgroundColor?: Branding["colors"];
   [key: string]: any;
 }
