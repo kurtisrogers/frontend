@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Header /> > renders correctly and links to the correct route 1`] = `
+<a
+  activeclass="current"
+  data-testid="mock-link"
+  href="/"
+>
+  loading
+</a>
+`;

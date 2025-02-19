@@ -12,8 +12,9 @@
     "build": "vite build",
     "serve": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "test": "vitest"
+    "storybook:build": "storybook build",
+    "test": "vitest",
+    "test:update": "vitest -u"
   },
   "license": "MIT",
   "devDependencies": {
@@ -23,6 +24,7 @@
     "@storybook/addon-interactions": "^8.5.7",
     "@storybook/blocks": "^8.5.7",
     "@storybook/test": "^8.5.7",
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/user-event": "^14.6.1",
     "jsdom": "^26.0.0",

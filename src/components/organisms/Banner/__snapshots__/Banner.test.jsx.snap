@@ -1,0 +1,60 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Banner > renders 1`] = `
+<div>
+  <div
+    class="content-grid wide"
+  >
+    <div
+      class="banner"
+    >
+      <div
+        class="banner__content"
+      >
+        <h1>
+          Welcome to my website
+        </h1>
+        <p>
+          My name is Kurtis Rogers, a proper Software Engineer from Bristol, UK
+        </p>
+        <ul>
+          <li>
+            Specialising in Frontend technology since 2018
+          </li>
+          <li>
+            Expert in leading frameworks including serverside Node development (Express/Koa)
+          </li>
+          <li>
+            Experienced in building and developing accessible themes in both Drupal and WordPress
+          </li>
+          <li>
+            Effective and approachable mentor
+          </li>
+          <li>
+            Team player, able to build robust yet relaxed relationships with colleagues and stakeholders alike
+          </li>
+        </ul>
+        <p>
+          Want to know more?
+        </p>
+        <a
+          class="button"
+          href="/about"
+        >
+          Read more about me
+        </a>
+      </div>
+      <div
+        class="banner__image"
+      >
+        <picture>
+          <img
+            alt="Something"
+            src="https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>
+`;

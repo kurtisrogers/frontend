@@ -26,7 +26,10 @@ export default function Banner( props: Readonly<Props> ) {
         {/* weird image/background colour section - not fully made my mind up */}
         <Show when={backgroundImage}>
           <div class="banner__image">
-            <img src={backgroundImage?.src} alt={backgroundImage?.alt} />
+            <picture>
+              {/* TODO: create a picture component which accepts an array of responsive images */}
+              <img src={backgroundImage?.src} alt={backgroundImage?.alt} />
+            </picture>
           </div>
         </Show>
       </div>

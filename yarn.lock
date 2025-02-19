@@ -3250,6 +3250,7 @@ __metadata:
     "@storybook/addon-interactions": "npm:^8.5.7"
     "@storybook/blocks": "npm:^8.5.7"
     "@storybook/test": "npm:^8.5.7"
+    "@testing-library/dom": "npm:^10.4.0"
     "@testing-library/jest-dom": "npm:^6.6.3"
     "@testing-library/user-event": "npm:^14.6.1"
     "@types/node": "npm:^22.13.4"
