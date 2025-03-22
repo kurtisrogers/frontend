@@ -1,5 +1,6 @@
-import { A } from "@solidjs/router";
 import Navigation from "@/components/molecules/Navigation";
+import SkipLink from "@/components/atoms/Skiplink";
+import Logo from "@/components/atoms/Logo";
 import "./style.css";
 import { JSX } from "solid-js";
 
@@ -13,32 +14,19 @@ type Props = {
   children?: JSX.Element[];
 };
 
-export default function Header(props: Readonly<Props>) {
-  // const [isScrolling, setIsScrolling] = createSignal(false);
-
-  function handleScroll() {
-    console.log("something");
-  }
-
-  /**
-   * TODO: implement mobile changes
-   */
-
+export default function Header({ children }: Readonly<Props>) {
   return (
-    <header on:scroll={handleScroll}>
-      {/* TODO: implement scroll action for the header */}
-      <A href="#main-content" class="button content-skipper">
-        Skip to main content
-      </A>
-      <div class="content">
-        <A href="/" class="logo text-white">
-          <strong>Kurtis Rogers</strong>
-        </A>
-        <div>
-          <Navigation />
-          {props.children}
+    <>
+      <SkipLink classes={["content-skipper"]} id="main" name="main content" isTag={true} />
+      <header tabindex="-1">
+        <div class="content">
+          <Logo />
+          <div>
+            <Navigation />
+            {children}
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 }

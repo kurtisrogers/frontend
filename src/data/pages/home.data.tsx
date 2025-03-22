@@ -1,4 +1,6 @@
+import Button from "@/components/atoms/Button";
 import Content from "@/components/atoms/Content";
+// import Link from "@/components/atoms/Link";
 import Banner from "@/components/organisms/Banner";
 
 const HomeData = {
@@ -34,9 +36,9 @@ const HomeData = {
             </li>
           </ul>
           <p>Want to know more?</p>
-          <a class="button" href="/about">
-            Read more about me
-          </a>
+          <Button variant="primary" outline={true} href={{ url: "/about" }}>
+            <span>Read more about me</span>
+          </Button>
         </>
       ),
       backgroundImage: {
@@ -44,25 +46,25 @@ const HomeData = {
           attributes: {
             alternativeText:
               "A photo of The Milky Way, lots of stars and some star-making gas clouds far far away...",
-            url: "/images/milkyway-galaxy-thumbnail.webp",
+            url: "/images/optimised/milkyway-galaxy-thumbnail.webp",
             formats: {
               thumbnail: {
-                src: "/images/milkyway-galaxy-thumbnail.webp"
+                src: "/images/optimised/milkyway-galaxy-thumbnail.webp"
               },
               small: {
-                src: "/images/milkyway-galaxy-sm.webp",
+                src: "/images/optimised/milkyway-galaxy-sm.webp",
                 minWidth: 320
               },
               medium: {
-                src: "/images/milkyway-galaxy-md.webp",
+                src: "/images/optimised/milkyway-galaxy-md.webp",
                 minWidth: 768
               },
               large: {
-                src: "/images/milkyway-galaxy-lg.webp",
+                src: "/images/optimised/milkyway-galaxy-lg.webp",
                 minWidth: 960
               },
               xlarge: {
-                src: "/images/milkyway-galaxy-xl.webp",
+                src: "/images/optimised/milkyway-galaxy-xl.webp",
                 minWidth: 1420
               }
             }
@@ -84,7 +86,7 @@ const HomeData = {
         </p>
       ),
       gridLayout: "wide",
-      backgroundColor: "white"
+      variant: "white"
     },
     {
       component: Content,
