@@ -106,6 +106,39 @@ const MaintenanceModeData = {
         marginBottom: "xs"
       },
       gridLayout: "wide"
+    },
+    {
+      component: Content,
+      children: (
+        <>
+          <h2>Work in progress</h2>
+        </>
+      ),
+      variant: "red",
+      layoutSpacing: {
+        paddingTop: "md",
+        paddingBottom: "md",
+        marginTop: "xs"
+      },
+      gridLayout: "wide"
+    },
+    {
+      component: Content,
+      children: (
+        <>
+          <p>
+            In the meantime if you wish to get a hold of me{" "}
+            <a href="https://linktr.ee/kurtisrogers" target="_blank">
+              check out my linkt.ree
+            </a>
+          </p>
+        </>
+      ),
+      variant: "white",
+      layoutSpacing: {
+        marginBottom: "xs"
+      },
+      gridLayout: "wide"
     }
   ]
 };
