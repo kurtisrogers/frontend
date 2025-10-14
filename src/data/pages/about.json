@@ -28,7 +28,7 @@
       "type": "banner",
       "title": {
         "text": "About",
-        "headingLevel": "2"
+        "headingLevel": "1"
       },
       "children": [
         {
@@ -36,7 +36,15 @@
           "children": [
             {
               "type": "text",
-              "text": "Technology is where I live, and my mind is often wondering if our species will ever reach Alpha Centauri... And if I'll ever be able to forgive Heinz for trying to sell 4 tins of Baked Beans for £7 during Covid."
+              "text": "Technology is where I live. I also love anything to do with space."
+            },
+            {
+              "type": "text",
+              "text": "Will our species ever reach Alpha Centauri? Propulsion technology has come a long way since we last went to the Moon. A simple laser-powered lightsail? Theoretically this could reach 20% speed of light (0.2c). So Alpha Centauri in a cool 21.41 years. Not sure about the return journey though..."
+            },
+            {
+              "type": "text",
+              "text": "Time dialation? 0.44 years. And roughly half an hour away via radio contact..."
             }
           ]
         }
@@ -62,8 +70,25 @@
             }
           }
         }
+      }
+    },
+    {
+      "type": "content",
+      "children": [
+        {
+          "type": "heading",
+          "headingLevel": "2",
+          "text": "Career"
+        }
+      ],
+      "variant": "yellow",
+      "layoutSpacing": {
+        "marginTop": "lg",
+        "marginBottom": "xs",
+        "paddingTop": "xs",
+        "paddingBottom": "xs"
       },
-      "gridLayout": "wide"
+      "gridLayout": "grid"
     },
     {
       "type": "content",
@@ -73,19 +98,178 @@
           "children": [
             {
               "type": "text",
-              "text": "I have been working as a web developer in the South West of England for over the past decade. During this time I have worked in multiple small and large agencies being an effective team member in many cross-discipline teams, and sometimes alongside client teams too!"
+              "text": "I'm a skilled developer with over a decade of experience, consistently delivering high-quality work across various government and private clients. I excel at breaking down complex problems and developing simple solutions, collaborating with colleagues from all disciplines to find the best approach possible."
+            },
+            {
+              "type": "text",
+              "text": "My technical expertise spans the modern web stack — TypeScript, React, Vue, Next.js, Nuxt.js, Node.js, and Express — alongside a strong foundation in semantic accessible HTML and WCAG standards. I'm experienced with comprehensive testing practices using Cypress, Jest, and AVA, and have worked extensively with both custom applications and CMS platforms including WordPress and Drupal."
+            },
+            {
+              "type": "text",
+              "text": "Since joining Nomensa in 2020 as a Frontend Developer (and being promoted to senior after a year or so), I've made significant contributions to projects for organizations like the NHS East of England Ambulance Service and The Ramblers. I've been proactive in mentoring junior team members and sharing knowledge on relevant technologies with the wider team during team meetings sharing my infectious enthusiasm for emerging technology."
+            },
+            {
+              "type": "text",
+              "text": "Throughout my career, I prioritise refactoring and reusing existing code patterns wherever possible to maintain compliance within established codebases and champion existing team practice. I foster strong relationships with all stakeholders and have progressed from junior developer roles to confidently leading technical decisions and supporting those around me."
             }
           ]
         }
       ],
+      "variant": "white",
+      "layoutSpacing": {
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "marginTop": "default"
+      },
+      "gridLayout": "grid"
+    },
+    {
+      "type": "content",
+      "children": [
+        {
+          "type": "heading",
+          "headingLevel": "2",
+          "text": "Technology"
+        }
+      ],
       "variant": "yellow",
       "layoutSpacing": {
-        "paddingTop": "lg",
-        "paddingBottom": "lg",
         "marginTop": "lg",
-        "marginBottom": "xs"
+        "marginBottom": "xs",
+        "paddingTop": "xs",
+        "paddingBottom": "xs"
       },
-      "gridLayout": "wide"
+      "gridLayout": "grid"
+    },
+    {
+      "type": "content",
+      "children": [
+        {
+          "type": "heading",
+          "headingLevel": "3",
+          "text": "Languages and tooling"
+        },
+        {
+          "type": "list",
+          "children": [
+            "JavaScript (vanilla)",
+            "TypeScript",
+            "Node",
+            "Semantic, accessible HTML",
+            "CSS",
+            "PHP (probably)"
+          ]
+        },
+        {
+          "type": "heading",
+          "headingLevel": "3",
+          "text": "Frameworks"
+        },
+        {
+          "type": "list",
+          "children": [
+            "Next",
+            "Nuxt",
+            "React",
+            "Vue",
+            "Solid",
+            "Express/Koa/Nest",
+            "Storybook",
+            "Cypress/Vitest/Jest/Ava"
+          ]
+        },
+        {
+          "type": "heading",
+          "headingLevel": "3",
+          "text": "Content Management Systems"
+        },
+        {
+          "type": "list",
+          "children": [
+            "Strapi",
+            "WordPress",
+            "Drupal"
+          ]
+        },
+        {
+          "type": "heading",
+          "headingLevel": "3",
+          "text": "Cloud Providers"
+        },
+        {
+          "type": "list",
+          "children": [
+            "AWS",
+            "Azure"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Important to note that whilst I've got experience using these services, I lack Infrastructure as Code experience (terraform) and this is a gap in my knowledge I hope to address in the future."
+            }
+          ]
+        }
+      ],
+      "variant": "white",
+      "layoutSpacing": {
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "marginTop": "default"
+      },
+      "gridLayout": "grid"
+    },
+    {
+      "type": "content",
+      "children": [
+        {
+          "type": "heading",
+          "headingLevel": "2",
+          "text": "Looking for a dev?"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Lucky you! I'm looking for my next gig. Interested in this exciting opportunity? You know what to do."
+            }
+          ]
+        },
+        {
+          "type": "buttongroup",
+          "children": [
+            {
+              "variant": "primary",
+              "outline": true,
+              "href": {
+                "url": "https://www.linkedin.com/in/kurtisrogers",
+                "target": "_blank"
+              },
+              "content": "Visit my LinkedIn"
+            },
+            {
+              "variant": "secondary",
+              "outline": true,
+              "href": {
+                "url": "/KurtisRogersCV.pdf",
+                "target": "_blank"
+              },
+              "content": "Resume"
+            }
+          ]
+        }
+      ],
+      "variant": "red",
+      "layoutSpacing": {
+        "paddingTop": "sm",
+        "paddingBottom": "sm",
+        "marginTop": "xl",
+        "marginBottom": "xl"
+      },
+      "gridLayout": "content"
     }
   ]
 }
