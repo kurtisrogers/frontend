@@ -55,19 +55,6 @@
   bottom: 0px;
   left: 0px;
   right: 0px;
-  box-shadow: 1px, 1px, 1px solid black;
-}
-
-.banner__content--image {
-  width: 100%;
-  grid-column: span 8;
-  align-self: stretch;
-  aspect-ratio: 2/1.5;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  box-shadow: 1px, 1px, 1px solid black;
 }
 
 .banner__content--image .credit {
