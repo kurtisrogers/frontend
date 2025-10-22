@@ -28,7 +28,8 @@
       "type": "banner",
       "title": {
         "text": "404",
-        "headingLevel": 1
+        "headingLevel": "1",
+        "headingClass": "text-size-h2"
       },
       "children": [
         {
@@ -83,21 +84,25 @@
                 "url": "https://www.linkedin.com/in/kurtisrogers",
                 "target": "_blank"
               },
-              "content": "Visit my LinkedIn"
+              "content": "Visit My LinkedIn"
             },
             {
               "variant": "secondary",
               "outline": true,
               "href": {
-                "url": "/KurtisRogersCV.pdf",
-                "target": "_blank"
+                "url": "/documents/KurtisRogersCV.pdf",
+                "target": "_self"
               },
-              "content": "Resume"
+              "attributes": {
+                "download": "KurtisRogersCV.pdf",
+                "type": "application/pdf"
+              },
+              "content": "Download My Resume"
             }
           ]
         }
       ],
-      "variant": "red",
+      "variant": "yellow",
       "layoutSpacing": {
         "paddingTop": "sm",
         "paddingBottom": "sm",
