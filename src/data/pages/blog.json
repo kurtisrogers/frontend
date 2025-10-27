@@ -28,8 +28,7 @@
       "type": "banner",
       "title": {
         "text": "Blog",
-        "headingLevel": "1",
-        "headingClass": "text-size-h2"
+        "headingLevel": "1"
       },
       "children": [
         {
@@ -37,7 +36,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Sometimes I post interesting bits of content on the web. Enjoy!"
+              "text": "Sometimes I post interesting bits of content on the internet."
             }
           ]
         }

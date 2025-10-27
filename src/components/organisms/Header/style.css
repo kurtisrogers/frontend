@@ -24,6 +24,23 @@ header > .content {
   background: var(--brand-red);
 }
 
+header > .content button {
+  margin-left: 1rem;
+}
+
+header > .content button[aria-expanded="true"] .line1,
+header > .content button[aria-expanded="true"] .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+header > .content button[aria-expanded="true"] .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
 header nav.site-navigation > ul {
   position: relative;
   display: flex;
@@ -65,7 +82,7 @@ header nav.site-navigation li {
 }
 
 header nav.site-navigation li > a {
-  font-size: var(--text-size-xl);
+  font-size: var(--text-xl);
 }
 
 header nav.site-navigation a {
@@ -74,12 +91,18 @@ header nav.site-navigation a {
   margin-left: 0px;
   outline: none;
   color: var(--brand-white);
-  text-underline-offset: 0.125rem;
-  text-underline-position: under;
+  text-underline-offset: 0rem;
 }
 
 header nav.site-navigation a:hover {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  header nav.site-navigation > ul:after,
+  header nav.site-navigation > ul:before {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1024px) {

@@ -18,6 +18,7 @@ export interface Props {
   outline?: boolean;
   callback?: (event: Event) => void;
   attributes?: Attributes;
+  icon?: boolean;
 }
 
 export default function Button({
@@ -26,6 +27,7 @@ export default function Button({
   variant = "primary",
   outline = false,
   href,
+  icon,
   attributes
 }: Readonly<Props>) {
   const handleButtonStyle = createMemo(() =>
@@ -39,18 +41,20 @@ export default function Button({
   const buttonClasses = [
     handleButtonStyle(),
     !isLink && outline ? "btn--outline" : !isLink ? "btn" : "",
-    !isLink ? `btn--${variant}` : ""
+    !isLink ? `btn--${variant}` : "",
+    icon && "icon-only"
   ].join(" ");
 
+  const sortedAttributes = {
+    ...(isLink ? { component: "a" } : { component: "button" }),
+    ...(isLink && { href: href?.url }),
+    ...(href?.target && { target: href?.target }),
+    ...(buttonClasses && { class: buttonClasses }),
+    ...(callback && { onClick: callback })
+  };
+
   return (
-    <Dynamic
-      component={href?.url ? "a" : "button"}
-      href={href?.url}
-      target={href?.target ?? "_self"}
-      class={buttonClasses}
-      onClick={callback}
-      {...attributes}
-    >
+    <Dynamic {...sortedAttributes} {...attributes}>
       {children}
       {href?.target === "_blank" && <span class="sr-only"> (opens a new tab)</span>}
     </Dynamic>
