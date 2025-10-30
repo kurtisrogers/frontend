@@ -13,7 +13,7 @@ export default function Socials() {
           </a>
         </li>
         <li>
-          <a href="https://github.com/Kurtmcmurt/kurtisrogers.com/tree/develop" target="_blank">
+          <a href="https://github.com/kurtisrogers/frontend/tree/develop" target="_blank">
             <Icon width={50} height={50} viewbox="0 0 24 24" icondata={icons.github} />
             <span class="sr-only">A link to the repo for this website (opens a new tab)</span>
           </a>
