@@ -4,8 +4,8 @@
     "name": "Kurtis Rogers",
     "email": "kurtmcmurt@gmail.com"
   },
-  "version": "3.",
-  "description": "Personal project to build a web app with Solid JS",
+  "version": "3.3.1",
+  "description": "A web app built with Solid js",
   "type": "module",
   "scripts": {
     "start": "vite",
