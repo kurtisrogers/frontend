@@ -1,5 +1,4 @@
 /* @refresh reload */
-// import { For, isServer, render } from "solid-js/web"; Tofu
 import { For, render } from "solid-js/web";
 import { Router, Route } from "@solidjs/router";
 import { Navigation as NavData } from "@/data/routes";
