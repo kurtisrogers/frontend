@@ -1,4 +1,4 @@
-type InputElements =
+type InputTypes =
   | "button"
   | "checkbox"
   | "radio"
@@ -14,4 +14,4 @@ type InputElements =
   | "reset"
   | "range";
 
-export type { InputElements };
+export type { InputTypes };

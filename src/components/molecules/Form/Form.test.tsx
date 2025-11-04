@@ -1,12 +1,12 @@
 import { render, screen } from "@solidjs/testing-library";
 import { describe, it, expect } from "vitest";
 import Form, { FormInputLabelWrapper } from "."; // Adjust path as needed
-import type { InputElements } from "@/types/forms";
+import type { InputTypes } from "@/types/forms";
 
 describe("FormInputLabelWrapper", () => {
   it("should wrap input elements that need labels with a label tag", () => {
     const { container } = render(() => (
-      <FormInputLabelWrapper element="input" name="test-input">
+      <FormInputLabelWrapper type="text" name="test-input">
         <input name="test-input" />
       </FormInputLabelWrapper>
     ));
@@ -18,19 +18,21 @@ describe("FormInputLabelWrapper", () => {
 
   it("should not wrap button elements with labels", () => {
     const { container } = render(() => (
-      <FormInputLabelWrapper element="button" name="test-button">
-        <button name="test-button">Click me</button>
+      <FormInputLabelWrapper type="button" name="test-button">
+        <input type="button" name="test-button">
+          Click me
+        </input>
       </FormInputLabelWrapper>
     ));
 
     const label = container.querySelector("label");
     expect(label).toBeFalsy();
-    expect(container.querySelector("button")).toBeTruthy();
+    expect(container.querySelector("input[type='button']")).toBeTruthy();
   });
 
   it("should not wrap submit elements with labels", () => {
     const { container } = render(() => (
-      <FormInputLabelWrapper element="submit" name="test-submit">
+      <FormInputLabelWrapper type="submit" name="test-submit">
         <input type="submit" name="test-submit" />
       </FormInputLabelWrapper>
     ));
@@ -42,7 +44,7 @@ describe("FormInputLabelWrapper", () => {
 
   it("should not wrap reset elements with labels", () => {
     const { container } = render(() => (
-      <FormInputLabelWrapper element="reset" name="test-reset">
+      <FormInputLabelWrapper type="reset" name="test-reset">
         <input type="reset" name="test-reset" />
       </FormInputLabelWrapper>
     ));
@@ -54,7 +56,7 @@ describe("FormInputLabelWrapper", () => {
 
   it("should not wrap hidden elements with labels", () => {
     const { container } = render(() => (
-      <FormInputLabelWrapper element="hidden" name="test-hidden">
+      <FormInputLabelWrapper type="hidden" name="test-hidden">
         <input type="hidden" name="test-hidden" />
       </FormInputLabelWrapper>
     ));
@@ -66,26 +68,26 @@ describe("FormInputLabelWrapper", () => {
 
   it("should wrap textarea elements with labels", () => {
     const { container } = render(() => (
-      <FormInputLabelWrapper element="textarea" name="test-textarea">
-        <textarea name="test-textarea" />
+      <FormInputLabelWrapper type="textarea" name="test-textarea">
+        <input type="textarea" name="test-textarea" />
       </FormInputLabelWrapper>
     ));
 
     const label = container.querySelector('label[for="test-textarea"]');
     expect(label).toBeTruthy();
-    expect(label?.querySelector("textarea")).toBeTruthy();
+    expect(label?.querySelector("input[type='textarea']")).toBeTruthy();
   });
 
   it("should wrap select elements with labels", () => {
     const { container } = render(() => (
-      <FormInputLabelWrapper element="select" name="test-select">
-        <select name="test-select" />
+      <FormInputLabelWrapper type="select" name="test-select">
+        <input type="select" name="test-select" />
       </FormInputLabelWrapper>
     ));
 
     const label = container.querySelector('label[for="test-select"]');
     expect(label).toBeTruthy();
-    expect(label?.querySelector("select")).toBeTruthy();
+    expect(label?.querySelector("input[type='select']")).toBeTruthy();
   });
 });
 
@@ -97,19 +99,19 @@ describe("Form", () => {
   };
 
   it("should render form with title and byline", () => {
-    const inputs = [{ name: "username", element: "input" as InputElements }];
+    const inputs = [{ name: "username", type: "text" as InputTypes }];
 
     render(() => (
       <Form
         title={{ text: "Test Form", headingLevel: "1" }}
-        byline={{ text: "Test byline", headingLevel: "2" }}
+        byline="Test byline"
         formConfig={mockFormConfig}
         inputs={inputs}
       />
     ));
 
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Test Form");
-    expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent("Test byline");
+    expect(screen.getByRole("paragraph")).toHaveTextContent("Test byline");
   });
 
   it("should apply form configuration attributes", () => {
@@ -123,7 +125,7 @@ describe("Form", () => {
       target: "_blank" as const
     };
 
-    const inputs = [{ name: "username", element: "input" as InputElements }];
+    const inputs = [{ name: "username", type: "text" as InputTypes }];
 
     const { container } = render(() => <Form formConfig={formConfig} inputs={inputs} />);
 
@@ -140,8 +142,8 @@ describe("Form", () => {
 
   it("should render input elements with proper labels", () => {
     const inputs = [
-      { name: "username", element: "input" as InputElements },
-      { name: "email", element: "input" as InputElements }
+      { name: "username", type: "text" as InputTypes },
+      { name: "email", type: "email" as InputTypes }
     ];
 
     const { container } = render(() => <Form formConfig={mockFormConfig} inputs={inputs} />);
@@ -157,8 +159,8 @@ describe("Form", () => {
 
   it("should render button elements without labels", () => {
     const inputs = [
-      { name: "submit-btn", element: "button" as InputElements },
-      { name: "reset-btn", element: "reset" as InputElements }
+      { name: "submit-btn", type: "button" as InputTypes },
+      { name: "reset-btn", type: "reset" as InputTypes }
     ];
 
     const { container } = render(() => <Form formConfig={mockFormConfig} inputs={inputs} />);
@@ -173,10 +175,10 @@ describe("Form", () => {
 
   it("should render mixed input types correctly", () => {
     const inputs = [
-      { name: "username", element: "input" as InputElements },
-      { name: "description", element: "textarea" as InputElements },
-      { name: "submit-btn", element: "button" as InputElements },
-      { name: "hidden-field", element: "hidden" as InputElements }
+      { name: "username", type: "text" as InputTypes },
+      { name: "description", type: "textarea" as InputTypes },
+      { name: "submit-btn", type: "button" as InputTypes },
+      { name: "hidden-field", type: "hidden" as InputTypes }
     ];
 
     const { container } = render(() => <Form formConfig={mockFormConfig} inputs={inputs} />);
@@ -202,7 +204,7 @@ describe("Form", () => {
       method: "get" as const
     };
 
-    const inputs = [{ name: "search", element: "input" as InputElements }];
+    const inputs = [{ name: "search", type: "search" as InputTypes }];
 
     const { container } = render(() => <Form formConfig={minimalConfig} inputs={inputs} />);
 

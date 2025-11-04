@@ -3,7 +3,7 @@
 exports[`Banner > renders 1`] = `
 <div>
   <section
-    class="banner parent-section"
+    class="banner child-section"
   >
     <div
       class="banner__content"

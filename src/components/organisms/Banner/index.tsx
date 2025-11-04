@@ -21,7 +21,7 @@ export interface Props {
 }
 
 export default function Banner(props: Readonly<Props>) {
-  const { title, image, children, firstChild = "dark" } = props;
+  const { title, image, children, firstChild } = props;
   const { data: { attributes: { alternativeText = "", credit } = {} } = {} } = image ?? {};
 
   return (

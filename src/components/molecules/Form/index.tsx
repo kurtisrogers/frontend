@@ -1,12 +1,12 @@
 import { Dynamic, For, Show } from "solid-js/web";
 import { JSX } from "solid-js";
-import type { InputElements } from "@/types/forms";
+import type { InputTypes } from "@/types/forms";
 import type { Heading } from "@/types/branding";
 import "./style.css";
 
 type Inputs = {
   name: string;
-  element: InputElements;
+  type: InputTypes;
 };
 
 type FormConfig = {
@@ -21,21 +21,21 @@ type FormConfig = {
 
 interface Props {
   title?: Heading;
-  byline?: Heading;
+  byline?: string;
   formConfig: FormConfig;
   inputs: Inputs[];
 }
 
 interface FormInputLabelWrapperProps {
   children: JSX.Element;
-  element: string;
+  type: string;
   name: string;
 }
 
 const elementLabelExclusionList = ["button", "reset", "hidden", "submit"];
 
-export const FormInputLabelWrapper = ({ children, element, name }: FormInputLabelWrapperProps) => {
-  if (elementLabelExclusionList.includes(element)) {
+export const FormInputLabelWrapper = ({ children, type, name }: FormInputLabelWrapperProps) => {
+  if (elementLabelExclusionList.includes(type)) {
     return children;
   } else {
     return <label for={name}>{children}</label>;
@@ -46,26 +46,23 @@ export default function Form({ title, byline, inputs, formConfig }: Props) {
   return (
     <form {...formConfig}>
       <Show when={title}>
-        <Dynamic
-          component={`h${typeof title === "string" ? "1" : title?.headingLevel}`}
-          class={typeof title === "string" ? "text-size-h1" : title?.headingClass}
-        >
-          {typeof title === "string" ? title : title?.text}
-        </Dynamic>
-      </Show>
-      <Show when={byline}>
-        <Dynamic
-          component={`h${typeof byline === "string" ? "1" : byline?.headingLevel}`}
-          class={typeof byline === "string" ? "text-size-h1" : byline?.headingClass}
-        >
-          {typeof byline === "string" ? byline : byline?.text}
-        </Dynamic>
+        <hgroup>
+          <Dynamic
+            component={`h${typeof title === "string" ? "1" : title?.headingLevel}`}
+            class={typeof title === "string" ? "text-size-h1" : title?.headingClass}
+          >
+            {typeof title === "string" ? title : title?.text}
+            <Show when={byline}>
+              <p>{byline}</p>
+            </Show>
+          </Dynamic>
+        </hgroup>
       </Show>
       <For each={inputs}>
         {item => {
           return (
-            <FormInputLabelWrapper element={item.element} name={item.name}>
-              <Dynamic component={item.element} name={item.name} />
+            <FormInputLabelWrapper type={item.type} name={item.name}>
+              <input type={item.type} name={item.name} />
             </FormInputLabelWrapper>
           );
         }}
